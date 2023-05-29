@@ -1,0 +1,14 @@
+.fieldset{
+    display: flex;
+    flex-direction: column;
+}
+fieldset > label {
+    margin-bottom: .75rem;
+}
+fieldset > input {
+
+}
+fieldset > span {
+    margin-top: .3125rem;
+    color:rgba(134, 142, 150, 1);
+}

@@ -1,33 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Button } from "./components/Button"
+import { Form } from "./components/Form"
+import { Input } from "./components/Input"
+import { Select } from "./components/Select"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Input label={'Descrição'} textHelp={'Ex: Compra de roupas'} type={'text'} id={'descriptionInput'} placeholder={'Digite aqui sua descrição'} />
+      <Input label={'Valor (R$)'} textHelp={''} type={'number'} id={'valueInput'} placeholder={'Informe o valor'} />
+
+      <Select id={'selectOption'}>
+        <option value="selectOpt">Selecione a opção</option>
+        <option value="entrada">Entrada</option>
+        <option value="saida">Saída</option>
+      </Select>
+
+      <Button text={'Inserir valor'} />
+
+      <Form>
+        
+      </Form>
+      
     </>
   )
 }
