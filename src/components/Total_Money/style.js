@@ -5,9 +5,8 @@ export const StyleTotalMoney = styled.div`
     justify-content: space-between;
 
     padding: 1.25rem 1.25rem;
-
     height: 6rem;
-    width: 22.1875rem;
+
     border-radius: .25rem;
     border: .0625rem solid var(--color-grey-2);
 
@@ -19,6 +18,10 @@ export const StyleTotalMoney = styled.div`
 
     span {
         color: var(--color-color-primary);
+    }
+
+    @media (min-width: 50rem) {
+        max-width: 22.1875rem;
     }
 
 `

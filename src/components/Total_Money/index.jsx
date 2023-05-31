@@ -1,6 +1,11 @@
 import { StyleTotalMoney } from "./style"
 
-export const TotalMoney = () => {
+// eslint-disable-next-line no-unused-vars, react/prop-types
+export const TotalMoney = ({transitionList}) => {
+    
+    // const TotalMoney = transitionList.reduce((sum, money) => (money.cash) + sum, 0)
+    // console.log(TotalMoney);
+
     return (
 
         <StyleTotalMoney>
@@ -8,7 +13,7 @@ export const TotalMoney = () => {
                 <p className="text-style-title-3">Valor total:</p>
                 <p className="text-style-body">O valor se refere ao saldo</p>
             </div>
-            <span className="text-style-title-3">R$ 8181,00</span>
+            <span className="text-style-title-3">R$ 0,00</span>
         </StyleTotalMoney>
 
     )
