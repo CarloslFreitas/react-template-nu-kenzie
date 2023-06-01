@@ -28,7 +28,7 @@ export const StyledCard = styled.li`
     }}
 
     transition: .3s;
-    animation: lefAppear .8s ease-in-out;
+    animation: appears 1s ease-in-out;
 
     .value__container {
         display: flex;
