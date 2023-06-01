@@ -32,7 +32,7 @@ export const StyledGlobal = createGlobalStyle`
         background-color: var(--body-color);
     }
     #root {
-        max-width: 81.25rem;
+        max-width: 78.125rem;
         height: 100vh;
         display: flex;
         flex-direction: column;

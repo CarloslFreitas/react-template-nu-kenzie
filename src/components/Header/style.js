@@ -13,7 +13,7 @@ export const StyleHeader = styled.header`
     box-shadow: 0rem .25rem 2rem -0.75rem #00000040;
 
     figure {
-        width: 1300px;
+        width: 1250px;
         display: flex;
         align-items: center;
         justify-content: space-between;
