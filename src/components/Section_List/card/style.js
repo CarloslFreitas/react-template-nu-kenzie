@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import '../../../../src/styles/animations.css'
 
 export const StyledCard = styled.li`
     display: flex;

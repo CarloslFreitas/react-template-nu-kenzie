@@ -1,8 +1,7 @@
-import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-export const StyledGlobal = styled`
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+export const StyledGlobal = createGlobalStyle`
+
     :root {
         --color-color-primary: rgba(253,55,126,1);
         --color-color-primary-2: rgba(227,73,129,1);
@@ -29,7 +28,7 @@ export const StyledGlobal = styled`
         display: flex;
         flex-wrap: wrap;
         gap: 60px;
-        margin: 0 clamp(15px, 8%, 100px);
+        margin: 130px clamp(15px, 8%, 100px);
     }
     @media (min-width: 50rem) {
         main {
@@ -167,6 +166,96 @@ export const StyledGlobal = styled`
     }
     .select__default:focus{
         border: 2px solid var(--color-grey-4);
+    }
+
+    @keyframes appears {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    50% {
+      transform: translateY(5px);
+      opacity: 1;
+    }
+}
+
+    @keyframes moveFadeIn {
+        0% {
+        transform: scale(0.3);
+        opacity: 0;
+        }
+    
+        50% {
+        transform: scale(1);
+    
+        opacity: 1;
+        }
+    }
+
+    @keyframes spin {
+        0%{
+        transform: rotate(0);
+        }
+        100%{
+        transform: rotate(360deg);
+        }
+    }
+
+    @keyframes lefAppear{
+        from{
+        opacity: 0;
+        transform: translateX(-150px);
+        }
+        to{
+        opacity: 1;
+        }
+    }
+
+    @keyframes rigthAppear{
+        0% {
+        transform: scale(0.3);
+        opacity: 0;
+        }
+        50% {
+        transform: scale(1);
+    
+        opacity: 1;
+        }
+    }
+
+    @keyframes dropAppear{
+        from{
+        opacity: 0;
+        transform: translateY(-400px);
+        }
+        to{
+        opacity: 1;
+        }
+    }
+
+    @keyframes anime {
+        0%, 100% {
+        transform: translateY(0);
+        }
+        50%{
+        transform: translateY(-20px);
+        }
+    }
+
+    @keyframes beat {
+        0%, 100% {
+        transform: scale(1);
+        }
+        50%{
+        transform: scale(1.1);
+        }
+    }
+
+    @keyframes colorChange {
+        0% {background-position: 0% 100%;}
+        50%{background-position: 100% 0%;}
+        100% {background-position: 0% 100%;}
     }
 
 `

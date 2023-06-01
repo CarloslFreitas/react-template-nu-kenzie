@@ -1,17 +1,24 @@
-import { Header } from "./components/Header"
-import { Form } from "./components/Form"
-import { SectionForm } from "./components/Section_Form"
-import { TotalMoney } from "./components/Total_Money"
+import { StyledGlobal } from "./styles/globalStyle"
+import { StyledReset } from "./styles/reset"
 
-import { useState } from "react"
+import { Header } from "./components/Header"
+import { SectionForm } from "./components/Section_Form"
+import { Form } from "./components/Form"
+import { TotalMoney } from "./components/Total_Money"
 import { SectionList } from "./components/Section_List"
 
+import { useState } from "react"
+
+
 function App() {
-  // eslint-disable-next-line no-unused-vars
+
   const [transitionList, setTransitionList] = useState([])
-  console.log(transitionList);
+
   return (
     <>
+      <StyledReset />
+      <StyledGlobal />
+
       <Header />
       <main>
         <SectionForm>
@@ -21,6 +28,7 @@ function App() {
         <SectionList transitionList={transitionList} setTransitionList={setTransitionList} />
       </main>
     </>
+
   )
 }
 
