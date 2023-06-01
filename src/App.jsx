@@ -9,24 +9,35 @@ import { SectionList } from "./components/Section_List"
 
 import { useState } from "react"
 
+import { createContext } from "react"
+
+export const ThemeContext = createContext(null)
 
 function App() {
 
   const [transitionList, setTransitionList] = useState([])
+  const [theme, setTheme] = useState("light")
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
+  }
 
   return (
     <>
-      <StyledReset />
-      <StyledGlobal />
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <StyledReset />
+        <StyledGlobal id={theme} />
 
-      <Header />
-      <main>
-        <SectionForm>
-          <Form setTransitionList={setTransitionList} />
-          <TotalMoney transitionList={transitionList} />
-        </SectionForm>
-        <SectionList transitionList={transitionList} setTransitionList={setTransitionList} />
-      </main>
+        <Header toggleTheme={toggleTheme} theme={theme} />
+        <main>
+          <SectionForm>
+            <Form setTransitionList={setTransitionList} />
+            <TotalMoney transitionList={transitionList} />
+          </SectionForm>
+          <SectionList transitionList={transitionList} setTransitionList={setTransitionList} />
+        </main>
+
+      </ThemeContext.Provider>
     </>
 
   )

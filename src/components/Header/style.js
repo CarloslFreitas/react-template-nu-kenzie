@@ -4,7 +4,7 @@ export const StyleHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
-
+    background-color: var(--color-grey-1);
     height: 5.5rem;
     width: 100%;
     position: fixed;
@@ -14,8 +14,18 @@ export const StyleHeader = styled.header`
 
     figure {
         width: 1300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        gap: 20px;
     }
     img {
         margin: 0 clamp(15px, 8%, 100px); 
+    }
+    button {
+        display: none;
+        margin: 0 clamp(15px, 8%, 100px) 0 0; 
+        cursor: pointer;
     }
 `

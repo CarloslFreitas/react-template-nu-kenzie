@@ -10,19 +10,35 @@ export const StyledGlobal = createGlobalStyle`
         --color-grey-3: rgba(52,58,64,1);
         --color-grey-2: rgba(233,236,239,1);
         --color-grey-1: rgba(248,249,250,1);
-
+        --body-color:   #ffffff;
         --font-family: 'Nunito', sans-serif;
         --font-button: 'Inter', sans-serif;
     }
 
+    #dark:root {
+        --color-color-primary: rgba(253,55,126,1);
+        --color-color-primary-2: rgba(227,73,129,1);
+        --color-color-secondary: rgba(3,184,152,1);
+        --color-grey-4: rgba(248,249,250,1);
+        --color-grey-3: rgba(233,236,239,1);
+        --color-grey-3: rgba(52,58,64,1);
+        --color-grey-1: rgba(33,37,41,1);
+        --body-color:   #000000;
+
+        --font-family: 'Nunito', sans-serif;
+        --font-button: 'Inter', sans-serif;
+    }
+    body {
+        background-color: var(--body-color);
+    }
     #root {
         max-width: 81.25rem;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         margin: 0 auto;
         overflow-y: auto;
         gap: 3.125rem;
-        
     }
 
     main{

@@ -63,7 +63,7 @@ export const StyledCard = styled.li`
     }
 
     :hover {
-        transform: scale(1.05);
+        transform: scale(1.01);
         background-color: var(--color-white);
         box-shadow: 0px 4px 42px -12px #00000040;
     }
