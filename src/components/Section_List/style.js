@@ -13,5 +13,7 @@ export const StyledSectionList = styled.section`
         display: flex;
         flex-direction: column;
         gap: .9375rem;
+        transition: .3s;
+        animation: lefAppear .8s ease-in-out;
     }
 `

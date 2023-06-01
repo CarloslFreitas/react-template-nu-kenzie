@@ -10,5 +10,5 @@ export const StyleForm = styled.form`
 
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .75rem;
 `

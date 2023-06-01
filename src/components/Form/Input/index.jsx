@@ -1,7 +1,6 @@
 import { StyleInput } from "./style"
 
-// eslint-disable-next-line react/prop-types
-export const Input = ({ label, type, id, placeholder, textHelp, value,...rest}) => {
+export const Input = ({ label, type, id, placeholder, textHelp, value, ...rest }) => {
 
     return (
         <StyleInput>
@@ -13,7 +12,7 @@ export const Input = ({ label, type, id, placeholder, textHelp, value,...rest}) 
                 placeholder={placeholder}
                 value={value}
                 required
-                {...rest}/>
+                {...rest} />
 
             <span className='text-style-caption'> {textHelp} </span>
         </StyleInput>

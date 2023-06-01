@@ -7,5 +7,6 @@ export const StyleSelect = styled.fieldset`
 
     select{
         width: 100%;
+        pointer-events: hidden;
     }
 `

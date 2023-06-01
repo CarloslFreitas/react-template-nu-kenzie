@@ -3,7 +3,9 @@ import { StyleHeader } from './style'
 
 
 export const Header = () => {
+
     return (
+        
         <StyleHeader>
             <figure>
                 <img src={logo} alt="NuKenzie-Logo" />

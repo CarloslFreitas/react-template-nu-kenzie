@@ -7,16 +7,15 @@ import { useState } from 'react'
 
 import { StyleForm } from './style'
 
-// eslint-disable-next-line react/prop-types
-export const Form = ({setTransitionList}) => {
+export const Form = ({ setTransitionList }) => {
 
     const [description, setDescription] = useState('')
     const [cash, setCash] = useState('')
-    const [type, setType] = useState('Selecione a opção')
+    const [type, setType] = useState('entrada')
 
     const addNewTransition = () => {
         const newTransition = { id: uuidv4(), description, cash, type }
-        setTransitionList((transitionList) => [...transitionList, newTransition])
+        setTransitionList((transitionList) => [newTransition, ...transitionList])
     }
 
     const submit = (e) => {
@@ -24,7 +23,6 @@ export const Form = ({setTransitionList}) => {
         addNewTransition()
         setDescription('')
         setCash('')
-        setType('Selecione a opção')
     }
 
     return (
@@ -48,7 +46,6 @@ export const Form = ({setTransitionList}) => {
                 onChange={(e) => setCash(e.target.value)} />
 
             <Select id={'selectOption'} onChange={(e) => setType(e.target.value)}>
-                <option value="selectOpt">Selecione a opção</option>
                 <option value="entrada">Entrada</option>
                 <option value="saida">Saída</option>
             </Select>

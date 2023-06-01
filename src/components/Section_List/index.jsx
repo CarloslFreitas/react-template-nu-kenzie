@@ -1,7 +1,6 @@
 import { Card } from "./card"
 import { StyledSectionList } from "./style"
 
-
 export const SectionList = ({ transitionList, setTransitionList }) => {
 
     const removeTrasitionItem = (IdItem) => {
@@ -16,7 +15,7 @@ export const SectionList = ({ transitionList, setTransitionList }) => {
             {transitionList.length > 0 ? (
                 <ul>
                     {transitionList.map((item) => <Card key={item.id} item={item}
-                    removeTrasitionItem={removeTrasitionItem} />)}
+                        removeTrasitionItem={removeTrasitionItem} />)}
                 </ul>
             ) : (
                 <p className="text-style-title-2">Você ainda não possui nenhum lançamento</p>

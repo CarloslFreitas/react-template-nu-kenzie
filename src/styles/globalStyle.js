@@ -16,25 +16,31 @@ export const StyledGlobal = createGlobalStyle`
     }
 
     #root {
-        max-width: 1300px;
+        max-width: 81.25rem;
         display: flex;
         flex-direction: column;
         margin: 0 auto;
         overflow-y: auto;
-        gap: 50px;
+        gap: 3.125rem;
+        
     }
 
     main{
         display: flex;
         flex-wrap: wrap;
-        gap: 60px;
-        margin: 130px clamp(15px, 8%, 100px);
+        gap: 3.75rem;
+        margin: 8.125rem clamp(.9375rem, 8vw, 6.25rem);
     }
     @media (min-width: 50rem) {
         main {
             justify-content: space-between;
             flex-direction: row;
             flex-wrap: nowrap;
+        }
+    }
+    @media (max-width: 23.75rem) {
+        main {
+            margin:8.125rem .9375rem;
         }
     }
     
@@ -133,9 +139,11 @@ export const StyledGlobal = createGlobalStyle`
         cursor: pointer;
         color: rgba(255, 255, 255, 1);
         transition: .3s;
+        margin-top: 10px;
     }
     .button__default:hover{
         background-color: var(--color-color-primary-2);
+        transform: scale(1.02);
     }
 
     .input__default {
@@ -257,5 +265,16 @@ export const StyledGlobal = createGlobalStyle`
         50%{background-position: 100% 0%;}
         100% {background-position: 0% 100%;}
     }
-
+    ::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--color-grey-1);
+    }
+    ::-webkit-scrollbar-track{
+        border-radius: 50px;
+        background-color: var(--color-);
+    }
+    ::-webkit-scrollbar-thumb{
+        border: solid 1px var(--color-color-primary-2);
+        border-radius: 50px;
+    }
 `

@@ -1,18 +1,33 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const StyledCard = styled.li`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
     height: 87px;
     max-width: 560px;
+
     padding: 10px 20px;
     border-radius: 4px;
+    
     background: var(--color-grey-1);
-    border-left: solid 5px var(--color-color-secondary) ;
 
-    transition: all.3s;
+    ${(props) => {
+        
+        if(props.type === 'entrada'){
+            return css`
+                border-left: solid 5px var(--color-color-secondary) ;
+            `
+        }else if(props.type === 'saida') {
+            return css`
+                border-left: solid 5px var(--color-grey-2) ;
+            `
+        }
+    }}
+
+    transition: .3s;
     animation: lefAppear .8s ease-in-out;
 
     .value__container {
@@ -48,7 +63,8 @@ export const StyledCard = styled.li`
     }
 
     :hover {
-        transform: scale(1.07);
-        background-color: whitesmoke;
+        transform: scale(1.05);
+        background-color: var(--color-white);
+        box-shadow: 0px 4px 42px -12px #00000040;
     }
 `
