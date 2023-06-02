@@ -8,10 +8,8 @@ export const StyledSectionList = styled.section`
     width: 100%;
     max-width: 560px;
     margin-bottom: 1.875rem;
-    overflow-y: auto;
     
     ul{
-        overflow-x: hidden;
         display: flex;
         flex-direction: column;
         gap: .9375rem;

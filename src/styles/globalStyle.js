@@ -37,7 +37,6 @@ export const StyledGlobal = createGlobalStyle`
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        overflow-y: auto;
         gap: 3.125rem;
     }
 
@@ -282,7 +281,7 @@ export const StyledGlobal = createGlobalStyle`
         100% {background-position: 0% 100%;}
     }
     ::-webkit-scrollbar{
-    width: 10px;
+    width: 5px;
     background-color: var(--color-grey-1);
     }
     ::-webkit-scrollbar-track{
